@@ -1,0 +1,76 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# Vitaliy Kozharskiy 
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/buster64"
+
+  config.vm.define "debian80" do |debian80|
+    
+    
+     debian80.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+
+     debian80.vm.network "private_network", ip: "192.168.1.1"
+     
+     debian80.vm.provider "virtualbox" do |vb|
+    	vb.name = "debian80"
+        
+	vb.memory = "512"
+     end
+  
+     debian80.vm.provision "shell", inline: <<-SHELL
+     
+     	sudo apt-get install -y apache2
+
+     	sudo chmod 775 /var/www/html
+     	sudo chown -R root:vagrant /var/www/html
+
+     	sudo cp /vagrant/index.html /var/www/html
+
+    	sudo systemctl enable apache2
+     	sudo systemctl start apache2
+    
+     	sudo systemctl restart apache2
+        sudo apt-get install -y mc
+     
+      SHELL
+
+  end
+
+
+
+
+  config.vm.define "debian81" do |debian81|
+    
+
+    debian81.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1"
+
+    debian81.vm.network "private_network", ip: "192.168.1.2"
+     
+    debian81.vm.provider "virtualbox" do |vb|
+      vb.name = "debian81"
+        
+      vb.memory = "512"
+    end
+  
+    debian81.vm.provision "shell", inline: <<-SHELL
+     
+      sudo apt-get install -y apache2
+
+      sudo chmod 775 /var/www/html
+      sudo chown -R root:vagrant /var/www/html
+
+      sudo cp /vagrant/index.php /var/www/html
+      sudo rm /var/www/html/index.html
+
+      sudo systemctl enable apache2
+      sudo systemctl start apache2
+    
+      sudo apt-get install -y php libapache2-mod-php
+      sudo systemctl restart apache2
+      sudo apt-get install -y mc
+    SHELL
+
+  end
+
+end

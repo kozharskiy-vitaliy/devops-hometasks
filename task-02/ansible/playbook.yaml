@@ -1,0 +1,50 @@
+---
+- name: Ansible Playbook
+  hosts: all
+  become: yes
+
+  vars:
+    site80_src: ./index.html
+    site80_dst: /var/www/html/
+    site81_src: ./index.php
+    site81_dst: /var/www/php/
+    site80_conf: ./site80.conf
+    site81_conf: ./site81.conf
+    conf_dir: /etc/httpd/conf.d/
+
+  tasks:
+    - name: Creates directory for dynamic site 
+      file:
+        path: var/www/php
+        state: directory
+        owner: vagrant
+        group: vagrant
+        mode: 0775
+
+    - name: Copying index.html for static site
+      copy: src={{ site80_src }} dest={{ site80_dst }} mode=0775
+
+    - name: Copying index.php for dynamic site
+      copy: src={{ site81_src }} dest={{ site81_dst }} mode=0775
+
+    - name: Copying site80.conf for static site
+      copy: src={{ site80_conf }} dest={{ conf_dir }} mode=0775
+
+    - name: Copying site81.conf for dynamic site
+      copy: src={{ site81_conf }} dest={{ conf_dir }} mode=0775
+
+    - name: Add Apache port to listen
+      become: yes
+      lineinfile:
+        path: /etc/httpd/conf/httpd.conf
+        # regexp: '^Listen '
+        insertafter: '^Listen '
+        line: Listen 81
+
+    - name: restart service httpd on centos
+      become: yes
+      systemd:
+        state: restarted
+        daemon_reload: yes
+        name: httpd
+        

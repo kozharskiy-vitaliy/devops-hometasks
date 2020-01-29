@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# Vitaliy Kozharskiy 
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/8"
+    config.vm.provider "virtualbox" do |vb|
+    vb.name = "centos8_lamp"
+    vb.memory = "512"
+  end
+  
+  config.vm.provision "shell", inline: <<-SHELL
+
+   
+   # Install Midnigt Commander 
+    sudo yum install -y mc
+
+   # Install MySQL server
+    sudo yum install -y mysql-server
+    sudo systemctl start mysqld
+    sudo systemctl enable --now mysqld
+    
+    # Install Apache2 and PHP
+    sudo yum install -y httpd
+    sudo yum install -y php php-common php-cli 
+    sudo systemctl enable httpd
+    sudo systemctl start httpd
+ SHELL
+end

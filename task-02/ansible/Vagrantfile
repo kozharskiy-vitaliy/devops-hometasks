@@ -1,0 +1,22 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "kozharskiy-vitaliy/centos8-lamp-template"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "ansible-koharskiy"
+    vb.memory = "512"
+  end
+
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 81, host: 8081
+
+  config.vm.provision "file", source: "./playbook.yaml", destination: "/vagrant/playbook.yaml"
+
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  config.vm.provision :ansible_local do |ans|
+    ans.playbook = 'playbook.yaml'
+    ans.limit = 'all'
+    ans.verbose = true
+    ans.install = true
+  end
+end
