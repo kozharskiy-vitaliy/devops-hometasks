@@ -1,0 +1,34 @@
+---
+# Kozharskiy Vitaliy
+# Роль ansible-role-jenkins-kozharskiy
+#------------------------1-----------------------------------------------------------------------------
+# Перезапуск службы Jenkins при срабатывании определенного условия 
+# name:- это имя задачи
+# service: name=jenkins state=restarted - имя сервиса(службы) и ее перезапуск 
+
+- name: restart jenkins
+  service: name=jenkins state=restarted
+
+#------------------------2-----------------------------------------------------------------------------
+# Конфигурация пользователей по умолчанию
+# name:- это имя задачи
+# template: - шаблон файла на удаленный сервер
+# src: Путь шаблона в формате Jinja2 на контроллере Ansible.
+# Jinja2 — самый популярный шаблонизатор в языке программирования Python
+# dest: Расположение для шаблона. {{ jenkins_home }} = /var/lib/jenkins
+# Переменная {{ jenkins_home }} расположена в ansible-role-jenkins-kozharskiy\defaults\main.yml
+# owner: имя пользователя, которому должен принадлежать файл / каталог 
+# Переменная "{{ jenkins_process_user }}" = jenkins . Расположена в ansible-role-jenkins-kozharskiy\defaults\main.yml
+# group: - Имя группы, которой должен принадлежать файл / каталог 
+# Переменная "{{ jenkins_process_group }}" = jenkins. Расположена в ansible-role-jenkins-kozharskiy\defaults\main.yml
+# mode: - Разрешения, которые должен иметь полученный файл или каталог
+# register: - Параметр register сохраняет результат выполнения модуля в переменную.
+
+- name: configure default users
+  template:
+    src: basic-security.groovy.j2
+    dest: "{{ jenkins_home }}/init.groovy.d/basic-security.groovy"
+    owner: "{{ jenkins_process_user }}"
+    group: "{{ jenkins_process_group }}"
+    mode: 0775
+  register: jenkins_users_config

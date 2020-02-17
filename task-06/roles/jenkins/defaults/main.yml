@@ -1,0 +1,65 @@
+---
+# Kozharsliy Vitaliy
+# Роль ansible-role-jenkins-kozharskiy
+# Прописываем переменные которые расположены в ansible-role-jenkins-kozharskiy\defaults\ 
+# Переменные будут использоваться при разворачивании новой задачи для Jenkins и в будущем Pipeline
+ 
+# 1) Состояние пакета Jenkins используется актуальное, т.е последней версии
+jenkins_package_state: present
+# 2) Задержка соединения Jenkins на 5 сек 
+jenkins_connection_delay: 5
+# 3) Повтор соединения для Jenkins каждые 60 сек
+jenkins_connection_retries: 60
+# 4) Домашняя директория Jenkins с необходимыми конфиг файлами
+jenkins_home: /var/lib/jenkins
+# 5) Использование localhost для доступа к Jenkins
+jenkins_hostname: localhost
+# 6) Используем localhost:8080  для доступа к Jenkins по проброшенному порту 8080
+jenkins_http_port: 8080
+# 7) Расположение клиента Jenkins-CLI. Jenkins имеет встроенный интерфейс командной строки, 
+# который позволяет получать доступ к Jenkins из среды сценариев или оболочки shell 
+# Скачивается JAR-файл — это Java-архив.Представляет собой ZIP-архив, в котором содержится часть программы на языке Java
+# Используется для связи с Jenkins через CLI
+jenkins_cli_jar_location: /opt/jenkins-cli.jar
+# 8) URL префикс с пустым значением переменной.Переменная объявлена, а значения нет.Цитата Паши Микулича 14.02.2020 в 15-43:)
+# Используется для установки префикса URL при установке Jenkins К примеру `http://www.example.com {{jenkins_url_prefix}}`
+jenkins_url_prefix: ""
+# 9) Отключение требования ввода сгенерированного пароля Jenkins для Administrator.Требует сгенерированный пароль
+# после установки Jenkins. Пароль находится по пути /var/lib/jenkins/secrets/initialAdminPassword 
+jenkins_java_options: "-Djenkins.install.runSetupWizard=false"
+# 10) Плагины Jenkins устанавливаются автоматически при настройке системы.
+jenkins_plugins: []
+# 11) Используются плагины последних версий.
+jenkins_plugins_state: present
+# 12) Количество секунд, по истечении которых загружается новая копия файла update-center.json
+jenkins_plugin_updates_expiration: 90000
+# 13) Время ожидания подключения к серверу в секундах при установке плагинов Jenkins
+jenkins_plugin_timeout: 30
+# 14) Разрешение установки любых зависимостей для плагинов
+jenkins_plugins_install_dependencies: true
+# 15) URL-адрес для обновления плагинов Jenkins
+jenkins_updates_url: "https://updates.jenkins.io"
+# 16) Задали переменные для учетной записи и пароля.Учетные данные администратора и пароль по умолчанию,
+# которые будут созданы при первой установке Jenkins.
+jenkins_admin_username: admin
+jenkins_admin_password: admin
+# 17) Оставляем неизменным расположение Файл пароля администратора по умолчанию,
+# который будет создан при первой установке Jenkins по пути /var/lib/jenkins/secrets/initialAdminPassword
+jenkins_admin_password_file: ""
+# 18) Задаем пользователя и группу для Jenkins
+jenkins_process_user: jenkins
+jenkins_process_group: "{{ jenkins_process_user }}"
+# 19) По умолчанию устанавливаем настроенный префикс URL и 
+# добавляем настроенные параметры Java для запуска Jenkins
+jenkins_init_changes:
+  - option: "JENKINS_ARGS"
+    value: "--prefix={{ jenkins_url_prefix }}"
+  - option: "{{ jenkins_java_options_env_var }}"
+    value: "{{ jenkins_java_options }}"
+
+# Основная задача чтобы Jenkins шел мимо прокси-сервера. И прокси-сервер не ограничивал его работу
+jenkins_proxy_host: ""
+jenkins_proxy_port: ""
+jenkins_proxy_noproxy:
+  - "127.0.0.1"
+  - "localhost"

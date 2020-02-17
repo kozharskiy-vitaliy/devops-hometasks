@@ -1,0 +1,130 @@
+---
+# Kozharskiy Vitaliy
+# Роль ansible-role-jenkins-kozharskiy
+#-----------------------------------1----------------------------------------------------------
+# Устанавливаем curl, apt-transport-https, gnupg
+# curl - позволит загружать различные файлы и репозитории из интернета
+# apt-transport-https -  пакет для поддержки https
+# gnupg -программа для шифрования информации и создания электронных цифровых подписей
+# name: Install curl, apt-transport-https, gnupg - это имя задачи
+# apt - пакетный менеджер в Debian
+# name: - имена устанавливаемых пакетов 
+# state: present - Задаем установку пакетов актуальных версий
+
+
+- name: Install curl, apt-transport-https, gnupg
+  apt:
+    name:
+      - curl
+      - apt-transport-https
+      - gnupg
+    state: present
+
+#-----------------------------------2--------------------------------------------------------------------------------
+# Добавляем ключ репозитория Jenkins. Это переменная "{{ debia_jenkins_repo_key_url }}" = https://pkg.jenkins.io/debian/jenkins.io.key 
+# Переменную взяли из ansible-role-jenkins-kozharskiy\vars\debian-vars\debian-vars.yml
+# name:- это имя задачи
+# apt_key: - использование ключа, в нашем случае для Jenkins 
+# url откуда скачиваем ключ https://pkg.jenkins.io/debian/jenkins.io.key
+# state: present - Задаем установку пакетов актуальных версий
+
+- name: Jenkins repository key.
+  apt_key:
+    url: "{{ debian_jenkins_repo_key_url }}"
+    state: present
+
+#-----------------------------------3------------------------------------------------------------------------------
+# Добавляем репозиторий Jenkins 
+# name:- это имя задачи
+# apt_repository: -  добавляет или удаляет apt репозитории
+# repo: - параметр для репозитория, в нашем случае для Jenkins
+# "{{ debian_jenkins_repo_url }}" = deb https://pkg.jenkins.io/debian binary/
+# Переменную взяли из ansible-role-jenkins-kozharskiy\vars\debian-vars\debian-vars.yml
+# state: present - Задаем установку пакетов актуальных версий
+# update_cache: true - проверяем не устарел ли кеш и при необходимости очищаем его
+# when - определяет при каких условиях выполняться задаче 
+# | default(false) - исполнять блок, когда переменная debian_jenkins_repo_url - true (значение по умолчанию false)
+# Т.е. он ее тут таким образом определил для блока со значением false
+# tags - дает возможность запускать только определенную часть playbook, а не запускать весь целиком
+# tags: ['skip_ansible_lint'] - пропуск проверки синтаксиса в этом блоке
+ 
+
+- name: Jenkins repository.
+  apt_repository:
+    repo: "{{ debian_jenkins_repo_url }}"
+    state: present
+    update_cache: true
+  when: debian_jenkins_repo_url | default(false)
+  tags: ['skip_ansible_lint']
+
+
+#-----------------------------------4--------------------------------------------------------------------------------
+# Скачиваем определенную версию Jenkins 
+# name:- это имя задачи
+# get_url: - загружает файлы с HTTP, HTTPS или FTP на хост
+# url: - ссылка для скачивания пакета Jenkins
+# Пакет Jenkins "{{ debian_jenkins_pkg_url }} = https://pkg.jenkins.io/debian/binary 
+# Переменную взяли из ansible-role-jenkins-kozharskiy\vars\debian-vars\debian-vars.yml
+# Определенная версия {{ jenkins_version }} = 
+# Выражение When в Ansible - это проверка условия
+# when: jenkins_version is defined - исполнять блок, когда переменная jenkins_version определена
+# jenkins_version никто и не задает, в этом и дело. Этот блок для тех, кто ее задаст в главном плэйбуке, например.
+# Для тех, кто хочет не последнюю, а конкретную версию установить
+
+- name: Download specific Jenkins version.
+  get_url:
+    url: "{{ debian_jenkins_pkg_url }}/jenkins_{{ jenkins_version }}_all.deb"
+    dest: "/tmp/jenkins_{{ jenkins_version }}_all.deb"
+  when: jenkins_version is defined
+
+
+#-----------------------------------5--------------------------------------------------------------------------------
+
+# Проверка  скачали ли мы необходимую версию Jenkins 
+# name:- это имя задачи
+# stat: - Получить статус файла или файловой системы 
+# path: - путь где находится наш скаченный пакет jenkins 
+# register: - Параметр register сохраняет результат выполнения модуля в переменную. 
+# Затем эта переменная может использоваться в шаблонах
+# Выражение When в Ansible - это проверка условия
+# when: jenkins_version is defined - исполнять блок, когда переменная jenkins_version определена
+
+- name: Check if we downloaded a specific version of Jenkins.
+  stat:
+    path: "/tmp/jenkins_{{ jenkins_version }}_all.deb"
+  register: specific_version
+  when: jenkins_version is defined
+
+
+#-----------------------------------6--------------------------------------------------------------------------------
+# Установка необходимой версии Jenkins 
+# name:- это имя задачи
+# apt: - пакетный менеджер
+# state: present - Задаем установку пакетов актуальных версий
+# deb: - Путь к пакету .deb на удаленной машине
+# when: jenkins_version is defined and specific_version.stat.exists - исполнять блок, когда переменная 
+# jenkins_version определена и переменная specific_version существует то это событие обработается handler. 
+# notify: configure default users - Будет выполнена задача прописанная в ansible-role-jenkins-kozharskiy\handlers\main.yaml
+# Этот блок выполнится не сразу, а в конце всего сценария, если нет специального указания выполнить в какой-то момент
+
+- name: Install our specific version of Jenkins.
+  apt:
+    deb: "/tmp/jenkins_{{ jenkins_version }}_all.deb"
+    state: present
+  when: jenkins_version is defined and specific_version.stat.exists
+  notify: configure default users
+
+#-----------------------------------7--------------------------------------------------------------------------------
+
+# Проверка установлен ли Jenkins
+# name:- это имя задачи
+# apt: - пакетный менеджер
+# state: present - Задаем установку пакетов актуальных версий
+# Если Jenkins не установлен , то сработает обработчик событий notify: configure default users
+# Будет выполнена задача прописанная в ansible-role-jenkins-kozharskiy\handlers\main.yaml
+
+- name: Ensure Jenkins is installed.
+  apt:
+    name: jenkins
+    state: "{{ jenkins_package_state }}"
+  notify: configure default users

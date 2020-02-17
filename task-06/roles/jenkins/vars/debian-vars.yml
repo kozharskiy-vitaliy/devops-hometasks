@@ -1,0 +1,12 @@
+---
+# Kozharskiy Vitaliy 
+ # URL для репозиториев Jenkins в Debian.
+debian_jenkins_repo_url: deb https://pkg.jenkins.io/debian binary/
+debian_jenkins_repo_key_url: https://pkg.jenkins.io/debian/jenkins.io.key
+debian_jenkins_pkg_url: https://pkg.jenkins.io/debian/binary
+# Каталог в котором содержаться принятые по умолчанию значения параметров для утилит
+jenkins_init_file: /etc/default/jenkins
+# Прописываем порт который будем использовать в дальнейшем
+jenkins_http_port_param: HTTP_PORT
+# Задаем парметры для JAVA
+jenkins_java_options_env_var: JAVA_ARGS
