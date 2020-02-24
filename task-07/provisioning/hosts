@@ -1,0 +1,14 @@
+[jenkins]
+jenkins.vm
+
+[nexus]
+nexus.vm
+
+[staging]
+staging.vm
+
+[production]
+production.vm
+
+[all:vars]
+ansible_connection=local
