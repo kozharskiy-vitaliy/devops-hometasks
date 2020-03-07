@@ -1,0 +1,33 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@2.80">
+    <parentIds>
+      <string>20</string>
+    </parentIds>
+    <id>21</id>
+    <descriptorId>org.jenkinsci.plugins.docker.workflow.WithContainerStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.80">
+      <arguments>
+        <entry>
+          <string>args</string>
+          <string>--name jenkins-kozhvit -u 0:0 --network=kozharskiy_network_kozhvit -v /var/run/docker.sock:/var/run/docker.sock</string>
+        </entry>
+        <entry>
+          <string>image</string>
+          <string>9fdfa54bb5e3ac70ca76a975383d5bc6c9c0c0a2</string>
+        </entry>
+        <entry>
+          <string>toolName</string>
+          <null/>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.40">
+      <startTime>1583598895597</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>

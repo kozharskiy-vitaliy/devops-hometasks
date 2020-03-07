@@ -1,0 +1,51 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="cps.n.StepEndNode" plugin="workflow-cps@2.80">
+    <parentIds>
+      <string>10</string>
+    </parentIds>
+    <id>11</id>
+    <startId>3</startId>
+  </node>
+  <actions>
+    <wf.a.TimingAction plugin="workflow-api@2.40">
+      <startTime>1583577233300</startTime>
+    </wf.a.TimingAction>
+    <wf.a.ErrorAction plugin="workflow-api@2.40">
+      <error class="java.nio.file.AccessDeniedException">
+        <stackTrace>
+          <trace>java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:90)</trace>
+          <trace>java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)</trace>
+          <trace>java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)</trace>
+          <trace>java.base/sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:389)</trace>
+          <trace>java.base/java.nio.file.Files.createDirectory(Files.java:689)</trace>
+          <trace>java.base/java.nio.file.Files.createAndCheckIsDirectory(Files.java:796)</trace>
+          <trace>java.base/java.nio.file.Files.createDirectories(Files.java:782)</trace>
+          <trace>hudson.FilePath.mkdirs(FilePath.java:3256)</trace>
+          <trace>hudson.FilePath.access$1300(FilePath.java:211)</trace>
+          <trace>hudson.FilePath$Mkdirs.invoke(FilePath.java:1251)</trace>
+          <trace>hudson.FilePath$Mkdirs.invoke(FilePath.java:1247)</trace>
+          <trace>hudson.FilePath.act(FilePath.java:1075)</trace>
+          <trace>hudson.FilePath.act(FilePath.java:1058)</trace>
+          <trace>hudson.FilePath.mkdirs(FilePath.java:1243)</trace>
+          <trace>hudson.plugins.git.GitSCM.createClient(GitSCM.java:824)</trace>
+          <trace>hudson.plugins.git.GitSCM.checkout(GitSCM.java:1156)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:124)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:93)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:80)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)</trace>
+          <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+          <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+          <trace>java.base/java.lang.Thread.run(Thread.java:834)</trace>
+        </stackTrace>
+        <suppressedExceptions class="empty-list"/>
+        <file>/var/lib/jenkins/workspace/word-cloud-generator</file>
+      </error>
+    </wf.a.ErrorAction>
+    <wf.a.ErrorAction plugin="workflow-api@2.40">
+      <error class="java.nio.file.AccessDeniedException" reference="../../wf.a.ErrorAction/error"/>
+    </wf.a.ErrorAction>
+  </actions>
+</Tag>

@@ -1,0 +1,31 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@2.80">
+    <parentIds>
+      <string>9</string>
+    </parentIds>
+    <id>10</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.EnvStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.80">
+      <arguments>
+        <entry>
+          <string>overrides</string>
+          <list>
+            <string>GIT_BRANCH=origin/master</string>
+            <string>GIT_COMMIT=09892316f59499f1df0fcd8e9ed04cc3ec5823ec</string>
+            <string>GIT_PREVIOUS_COMMIT=68b4c401b1020d5523aa295727962cb4e5c320ff</string>
+            <string>GIT_PREVIOUS_SUCCESSFUL_COMMIT=68b4c401b1020d5523aa295727962cb4e5c320ff</string>
+            <string>GIT_URL=https://github.com/kozharskiy-vitaliy/word-cloud-generator</string>
+          </list>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.40">
+      <startTime>1583588356586</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>

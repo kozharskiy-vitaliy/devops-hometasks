@@ -1,0 +1,90 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@2.80">
+    <parentIds>
+      <string>25</string>
+    </parentIds>
+    <id>26</id>
+    <descriptorId>sp.sd.nexusartifactuploader.steps.NexusArtifactUploaderStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.80">
+      <arguments>
+        <entry>
+          <string>nexusVersion</string>
+          <string>nexus3</string>
+        </entry>
+        <entry>
+          <string>nexusUrl</string>
+          <string>nexus:8081</string>
+        </entry>
+        <entry>
+          <string>protocol</string>
+          <string>http</string>
+        </entry>
+        <entry>
+          <string>groupId</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>credentialsId</string>
+          <string>nexus-creds</string>
+        </entry>
+        <entry>
+          <string>repository</string>
+          <string>word-cloud-generator</string>
+        </entry>
+        <entry>
+          <string>version</string>
+          <string>1.$BUILD_NUMBER</string>
+        </entry>
+        <entry>
+          <string>artifacts</string>
+          <list>
+            <linked-hash-map>
+              <entry>
+                <string>artifactId</string>
+                <string>word-cloud-generator</string>
+              </entry>
+              <entry>
+                <string>classifier</string>
+                <string></string>
+              </entry>
+              <entry>
+                <string>file</string>
+                <string>artifacts/linux/word-cloud-generator.gz</string>
+              </entry>
+              <entry>
+                <string>type</string>
+                <string>gz</string>
+              </entry>
+            </linked-hash-map>
+          </list>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.40">
+      <startTime>1583582162773</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+    <wf.a.ErrorAction plugin="workflow-api@2.40">
+      <error class="hudson.AbortException">
+        <detailMessage>Uploading file word-cloud-generator.gz failed.</detailMessage>
+        <stackTrace>
+          <trace>sp.sd.nexusartifactuploader.steps.NexusArtifactUploaderStep$Execution.run(NexusArtifactUploaderStep.java:259)</trace>
+          <trace>sp.sd.nexusartifactuploader.steps.NexusArtifactUploaderStep$Execution.run(NexusArtifactUploaderStep.java:217)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.AbstractSynchronousNonBlockingStepExecution$1$1.call(AbstractSynchronousNonBlockingStepExecution.java:47)</trace>
+          <trace>hudson.security.ACL.impersonate(ACL.java:294)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.AbstractSynchronousNonBlockingStepExecution$1.run(AbstractSynchronousNonBlockingStepExecution.java:44)</trace>
+          <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+          <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+          <trace>java.base/java.lang.Thread.run(Thread.java:834)</trace>
+        </stackTrace>
+        <suppressedExceptions class="empty-list"/>
+      </error>
+    </wf.a.ErrorAction>
+  </actions>
+</Tag>

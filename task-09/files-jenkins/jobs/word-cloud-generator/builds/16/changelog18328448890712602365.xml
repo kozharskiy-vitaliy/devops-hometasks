@@ -1,0 +1,27 @@
+commit 09892316f59499f1df0fcd8e9ed04cc3ec5823ec
+tree 9e1790cfc1fcf2fa397981440f73b4b0586aea5e
+parent f87c31d15e8ba24bc1dff4191c722539f2be621b
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 16:39:00 +0300
+committer GitHub <noreply@github.com> 2020-03-07 16:39:00 +0300
+
+    Update Jenkinsfile
+
+:100644 100644 527a338063bfdd3079ad1b6c8738fc547052741b 4cf247f160798db819d8e0e09dffa16887ad9df2 M	Jenkinsfile
+commit f87c31d15e8ba24bc1dff4191c722539f2be621b
+tree 226f2366e3bc5cf6a4d244b23f4f412c84f9b0d9
+parent ead5777f4ff614c4ab3b1875631c9b3ce356daac
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 16:21:57 +0300
+committer GitHub <noreply@github.com> 2020-03-07 16:21:57 +0300
+
+    Update Jenkinsfile
+
+:100644 100644 34ff991f445d797935acdc9166a42cfd43393ea0 527a338063bfdd3079ad1b6c8738fc547052741b M	Jenkinsfile
+commit ead5777f4ff614c4ab3b1875631c9b3ce356daac
+tree fe4c6a52c4fba4c32b29d9671c1b65092fcd9b91
+parent 68b4c401b1020d5523aa295727962cb4e5c320ff
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 16:16:42 +0300
+committer GitHub <noreply@github.com> 2020-03-07 16:16:42 +0300
+
+    Update Jenkinsfile
+
+:100644 100644 c512f702791db85b0aac17b95471dbadb155cf33 34ff991f445d797935acdc9166a42cfd43393ea0 M	Jenkinsfile

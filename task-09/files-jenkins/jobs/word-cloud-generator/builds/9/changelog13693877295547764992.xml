@@ -1,0 +1,9 @@
+commit df4d11c72d93ccb9822e03146d2c53fcc69f8ad4
+tree f9b91fcc6347b6830cff33901a18bd2a3b307364
+parent fe31409ae7c9f727cb3fa65ddb4ec9c006f88256
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 14:46:09 +0300
+committer GitHub <noreply@github.com> 2020-03-07 14:46:09 +0300
+
+    Update Jenkinsfile
+
+:100644 100644 18bfabcc5236fac860f8248d5b9922675764f8e5 2f70c74e685cec564892f4f28df6242f227b5d34 M	Jenkinsfile

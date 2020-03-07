@@ -1,0 +1,9 @@
+commit 7f6bd637146820fd83885d62dc16e46ec7485889
+tree 1daad6d71afbc87b489233833cc8f06eb9c0c92a
+parent 7604b880a3980ec8a62fe150436c38afad36c7f5
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 16:05:20 +0300
+committer GitHub <noreply@github.com> 2020-03-07 16:05:20 +0300
+
+    Update Dockerfile
+
+:100644 100644 4c0edfbdbd64f2a409b09b216ac4d5622e4aca4e 11504513a942a42731eb0c5850239db7529e7167 M	Dockerfile

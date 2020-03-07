@@ -1,0 +1,9 @@
+commit c6b41314e034284d9f27658911b3d80cdcf35b31
+tree 5e137b642c48cf5328808fdb0b87640d69558d0c
+parent 09892316f59499f1df0fcd8e9ed04cc3ec5823ec
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 16:41:21 +0300
+committer GitHub <noreply@github.com> 2020-03-07 16:41:21 +0300
+
+    Create Dockerfile
+
+:000000 100644 0000000000000000000000000000000000000000 16cff177f6260e1d277e5b9e69714e91d6cb481c A	alpine/Dockerfile

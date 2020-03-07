@@ -1,0 +1,18 @@
+commit 7604b880a3980ec8a62fe150436c38afad36c7f5
+tree 2e195a8acfb477bad603d304697d926936f44050
+parent 1acc2497f3549421d8d35a4fcf59cffe3f471817
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 16:03:29 +0300
+committer GitHub <noreply@github.com> 2020-03-07 16:03:29 +0300
+
+    Update Dockerfile
+
+:100644 100644 d549db6e421fc71f15b5a233debace2a64943067 4c0edfbdbd64f2a409b09b216ac4d5622e4aca4e M	Dockerfile
+commit 1acc2497f3549421d8d35a4fcf59cffe3f471817
+tree e4e089d80eba90ba41f2c85a19bde98dad30a461
+parent 0ba056a55e1344e4f81eb5a7603279c8fc1a3da3
+author kozharskiy-vitaliy <55731603+kozharskiy-vitaliy@users.noreply.github.com> 2020-03-07 15:55:48 +0300
+committer GitHub <noreply@github.com> 2020-03-07 15:55:48 +0300
+
+    Update Jenkinsfile
+
+:100644 100644 d563367ffe4b4c418562e25c02f87dc5ec7fb802 c512f702791db85b0aac17b95471dbadb155cf33 M	Jenkinsfile

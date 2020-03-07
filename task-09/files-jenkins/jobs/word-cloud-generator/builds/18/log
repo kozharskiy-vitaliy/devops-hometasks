@@ -1,0 +1,462 @@
+Started by user [8mha:////4O2YO29QidQb5NruiKjxYDe6Dwh5UZaPSeuDI6hqsW79AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Obtained Jenkinsfile from git https://github.com/kozharskiy-vitaliy/word-cloud-generator
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4AmEB/ZuR4z72tRbGbFvY10moG781TnTQcUJmx2XnvFIAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4O3kX6Qa+7HzHEJAjikIQQ26qqEjp6r9XgDLlV+De4RDAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4Evn8NenD+WODxLwOgYUOGeuFKsz+k7tTJZ0BeGAmA3mAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /var/lib/jenkins/workspace/word-cloud-generator
+[8mha:////4GXw1xsTmVYPbZYguH4ZMTzo9Bo7myTY0z+cGQ+TeldnAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4AEtSDBFnNWTr01JR4j482CuzxK3WLUb8jXf3bXRmIJXAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4N0Gky4mzlZYLESSwMYkmYKl82b1LWtaMqkBQZf0f25OAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4MZo9MnZQWQBeYWaNpwGCG1m0MEVATSA+DqvFcwjabFqAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kozharskiy-vitaliy/word-cloud-generator # timeout=10
+Fetching upstream changes from https://github.com/kozharskiy-vitaliy/word-cloud-generator
+ > git --version # timeout=10
+ > git fetch --tags --force --progress -- https://github.com/kozharskiy-vitaliy/word-cloud-generator +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 20568efb693556eb3909d8f9086da9ba50e35124 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 20568efb693556eb3909d8f9086da9ba50e35124 # timeout=10
+Commit message: "Update Jenkinsfile"
+ > git rev-list --no-walk c6b41314e034284d9f27658911b3d80cdcf35b31 # timeout=10
+[8mha:////4BUx2RQzUd8wb4Bjx71W1EV+OfW/6vWIoKuhlS++qzEuAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4Dtmt+5s8kps5Qg96TNi3zCPRB9vldRhpBxnzzFLqTbrAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4BOLvZgPS2jw8R4vNdBFYJt/Ji4Fa2cc3ZtRV0Jwg8PiAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4IlFqvImaKu9OQYajbcJa8jJ+tOfQwqT5bIVoXNY+8BPAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4LkI+Gpt454RFTwYdsQ3pl+5/hCe64+YwbLsyJVL1RgeAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[8mha:////4EAj0Gg42vj4h0etG4qPonDn9+oD/lGa5uc7JjaxUokRAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (Declarative: Agent Setup)
+[8mha:////4ON0757fuyNDQRu5McOHfF9+DxlKWe9Ri3WuOKpuPCYMAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] isUnix
+[8mha:////4G6BeQWn7qlRC1sNdofRXDXOh/4n4evwFpm9jyl0GR3oAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN0uFte2+AAAA[0m[Pipeline] readFile
+[8mha:////4Lnrmfr1TG2EuMKRYvLakAGPScXRODI8qh0ALK00cPTDAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAGI1pjGvgAAAA==[0m[Pipeline] sh
++ docker build -t c1358a0939d0053eed3492309323b5f075f30b10 -t jenkins-slave -f Dockerfile .
+Sending build context to Docker daemon  17.48MB
+Step 1/5 : FROM golang:latest
+ ---> 25c4671a1478
+Step 2/5 : USER root
+ ---> Using cache
+ ---> aa08a4f546cb
+Step 3/5 : RUN apt-get update && apt-get install -y jq openjdk-11-jdk
+ ---> Using cache
+ ---> 317639d923ba
+Step 4/5 : ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
+ ---> Using cache
+ ---> 1bb46e172b39
+Step 5/5 : RUN apt-get update && apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io
+ ---> Using cache
+ ---> d7ffd8c2804b
+Successfully built d7ffd8c2804b
+Successfully tagged c1358a0939d0053eed3492309323b5f075f30b10:latest
+Successfully tagged jenkins-slave:latest
+[8mha:////4LCVwhDuihNDfK7T1gJnyjhH/3Cw0ERqWAloQmg8+EzuAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiREGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQG7xuaSvgAAAA==[0m[Pipeline] }
+[8mha:////4OCyPDPeQ57CgBTA//aEpYpnnvNoZmfFUu8Sr+feW0W6AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiqJAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N/hEtxS+AAAA[0m[Pipeline] // stage
+[8mha:////4JvKLgdlrlpMQLi+zKFNEXv9a3nr8Ktk7UP7huUn3CPdAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyKR3Hypah8QSYIEKY/wkQSeWJvJp3EM2MlVvs7NvmPV+wjgGOFDSzCgeDsTPMu0mXxTKF4eooM0sX1hFGcooJlQX16rSgoKRgSVXDisNGYecoGtQJttzKu2ycRN2cUyjfgUNt+hEeUPFiTjKkL8wBdrepj4Q/z18BzD5B3baf2vs3btuf1r4AAAA=[0m[Pipeline] isUnix
+[8mha:////4LUBy/dGCsQ+qL4QHwsHuSiYGGLYuKMCHBl0QWCW16YeAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIhtIgqrZWGF5j4ME6sO2M7JBUv4mv8AYtIVGyx2tlmXm9YxwAnDkb0SIOl2Fnh3WjyEhOH4ep4Ej1fRMcU2aFocWpZY7NgywlhSVHCSsIGqXMcLZkEW9mrh6qcIlOdU8jfUUJp9R2eUMhsTiqkL8wBdrdRR6af568AZp+grOtch73/AH7eGwW+AAAA[0m[Pipeline] sh
++ docker inspect -f . c1358a0939d0053eed3492309323b5f075f30b10
+.
+[8mha:////4CrTID99RSRtgHcFjcdrbvgpvKyBeH/TPiHj0oHXgonYAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYUVMrFEWThCSENJG/5ckpZ04EVfjDgQqMeHBsi1Z7/mCJkU4UHSss9h7TNqzIYyuJDZR7C+BJtbRmWnCRMEyaSdJxh6XKilbWFTVsBKwtqgDJY8uw0Z06q7aoNC1pxzLthdQe3ODB1SikLOK+VvmCNvraBLhj/MXAPOQoea82I5/ns0bXGTWLMIAAAA=[0m[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 1049241261d9b540c755f80987bb47aa46ef7f0cc4d3f51916653c95c5a8b8be
+$ docker run -t -d -u 1000:1000 --name jenkins-slave -u 0:0 --network=vagrant_default -v /var/run/docker.sock:/var/run/docker.sock -w /var/lib/jenkins/workspace/word-cloud-generator --volumes-from 1049241261d9b540c755f80987bb47aa46ef7f0cc4d3f51916653c95c5a8b8be -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** c1358a0939d0053eed3492309323b5f075f30b10 cat
+$ docker top e6c5c4bfc236d1e2ec24cb08351f63f77a92ef9445654162d2846e55ee8fb739 -eo pid,comm
+[8mha:////4NkmKSrvvpVwyKU4FlIXJj42DlFfJ1QZCu6gjWeOn3M2AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohUdEVMrFEXThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbyhjgRMFwp7GzGFvLez+aOfFMobt5ytzRlbeEkbzmjc4NKX1ea0NJw6qCwUbAVmPrKVo0CXbCyYesvERTXVKYt6MAZtUATyjETE4ypG+ZAuzvo4qEP85fAEx9AlYfFquXZ/kBAsTc3cIAAAA=[0m[Pipeline] {
+[8mha:////4FiYV8nirEbXAQ+yFkRXNXPJkDs4YJR871Z4YZN9vIHIAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUKiNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPpnFij8IAAAA=[0m[Pipeline] stage
+[8mha:////4AqNsxKjh3n8Cijn6GJPDP3b0dUJwuWpb24uuXVOviZLAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAd6e6VPCAAAA[0m[Pipeline] { (build)
+[8mha:////4NBUm1rO3JgdKDdLrazm42K4cQsnaIxz8Saajll/xfhsAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN38C26S+AAAA[0m[Pipeline] sh
++ export PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/jenkins/workspace/word-cloud-generator/bin
++ sed -i s/1.DEVELOPMENT/1.18/g ./rice-box.go
++ make
+Cleaning up previous builds
+Install godep...
+Restoring dependencies...
+godep: [WARNING]: godep should only be used inside a valid go package directory and
+godep: [WARNING]: may not function correctly. You are probably outside of your $GOPATH.
+godep: [WARNING]:	Current Directory: /var/lib/jenkins/workspace/word-cloud-generator
+godep: [WARNING]:	$GOPATH: /go
+PASS
+ok  	_/var/lib/jenkins/workspace/word-cloud-generator	0.011s
+Creating compiled builds in ./artifacts
+runtime/internal/atomic
+internal/cpu
+runtime/internal/sys
+internal/bytealg
+runtime/internal/math
+internal/race
+sync/atomic
+unicode
+runtime
+unicode/utf8
+encoding
+math/bits
+math
+internal/testlog
+unicode/utf16
+container/list
+crypto/internal/subtle
+crypto/subtle
+vendor/golang.org/x/crypto/cryptobyte/asn1
+internal/nettrace
+vendor/golang.org/x/crypto/internal/subtle
+internal/reflectlite
+sync
+math/rand
+internal/singleflight
+errors
+sort
+io
+strconv
+bytes
+internal/oserror
+syscall
+reflect
+time
+internal/poll
+encoding/binary
+internal/fmtsort
+internal/syscall/unix
+os
+encoding/base64
+strings
+fmt
+bufio
+hash
+hash/crc32
+path/filepath
+encoding/json
+log
+compress/flate
+io/ioutil
+path
+archive/zip
+_/var/lib/jenkins/workspace/word-cloud-generator/wordyapi
+github.com/GeertJohan/go.rice/embedded
+hash/adler32
+compress/zlib
+debug/dwarf
+github.com/kardianos/osext
+compress/gzip
+context
+crypto/cipher
+crypto/aes
+math/big
+debug/elf
+debug/macho
+debug/pe
+github.com/daaku/go.zipexe
+crypto/rand
+crypto
+crypto/des
+crypto/elliptic
+crypto/internal/randutil
+crypto/sha512
+encoding/asn1
+crypto/ed25519/internal/edwards25519
+crypto/ecdsa
+crypto/hmac
+crypto/ed25519
+crypto/md5
+crypto/rc4
+crypto/rsa
+crypto/sha1
+crypto/sha256
+crypto/dsa
+encoding/hex
+encoding/pem
+crypto/x509/pkix
+vendor/golang.org/x/crypto/cryptobyte
+vendor/golang.org/x/net/dns/dnsmessage
+vendor/golang.org/x/net/route
+net/url
+net
+os/exec
+vendor/golang.org/x/crypto/chacha20
+vendor/golang.org/x/crypto/poly1305
+vendor/golang.org/x/sys/cpu
+vendor/golang.org/x/crypto/chacha20poly1305
+vendor/golang.org/x/crypto/curve25519
+vendor/golang.org/x/crypto/hkdf
+vendor/golang.org/x/text/transform
+vendor/golang.org/x/text/unicode/bidi
+crypto/x509
+vendor/golang.org/x/text/secure/bidirule
+vendor/golang.org/x/text/unicode/norm
+crypto/tls
+vendor/golang.org/x/net/idna
+net/textproto
+vendor/golang.org/x/net/http/httpguts
+vendor/golang.org/x/net/http/httpproxy
+vendor/golang.org/x/net/http2/hpack
+mime
+mime/quotedprintable
+mime/multipart
+net/http/internal
+regexp/syntax
+net/http/httptrace
+net/http
+regexp
+html
+text/template/parse
+text/template
+html/template
+github.com/gorilla/mux
+github.com/GeertJohan/go.rice
+_/var/lib/jenkins/workspace/word-cloud-generator
+net
+net/textproto
+crypto/x509
+vendor/golang.org/x/net/http/httpguts
+vendor/golang.org/x/net/http/httpproxy
+crypto/tls
+net/http/httptrace
+net/http
+_/var/lib/jenkins/workspace/word-cloud-generator
+internal/cpu
+runtime/internal/atomic
+runtime/internal/sys
+internal/bytealg
+runtime/internal/math
+internal/race
+sync/atomic
+unicode
+runtime
+unicode/utf8
+encoding
+math/bits
+math
+internal/syscall/windows/sysdll
+unicode/utf16
+internal/testlog
+container/list
+crypto/internal/subtle
+crypto/subtle
+vendor/golang.org/x/crypto/cryptobyte/asn1
+internal/nettrace
+vendor/golang.org/x/crypto/internal/subtle
+internal/reflectlite
+sync
+math/rand
+internal/singleflight
+errors
+sort
+io
+strconv
+bytes
+internal/oserror
+syscall
+reflect
+internal/syscall/windows
+internal/syscall/windows/registry
+time
+encoding/binary
+internal/fmtsort
+encoding/base64
+internal/poll
+strings
+os
+bufio
+hash
+hash/crc32
+path
+hash/adler32
+context
+fmt
+path/filepath
+io/ioutil
+github.com/kardianos/osext
+crypto
+crypto/cipher
+encoding/json
+log
+compress/flate
+archive/zip
+_/var/lib/jenkins/workspace/word-cloud-generator/wordyapi
+github.com/GeertJohan/go.rice/embedded
+compress/zlib
+debug/dwarf
+compress/gzip
+math/big
+debug/elf
+debug/macho
+debug/pe
+crypto/rand
+crypto/aes
+github.com/daaku/go.zipexe
+crypto/des
+crypto/elliptic
+crypto/internal/randutil
+crypto/sha512
+encoding/asn1
+crypto/ed25519/internal/edwards25519
+crypto/ecdsa
+crypto/ed25519
+crypto/hmac
+crypto/md5
+crypto/rc4
+crypto/rsa
+crypto/sha1
+crypto/sha256
+crypto/dsa
+encoding/hex
+encoding/pem
+crypto/x509/pkix
+vendor/golang.org/x/crypto/cryptobyte
+vendor/golang.org/x/net/dns/dnsmessage
+net/url
+net
+vendor/golang.org/x/crypto/chacha20
+vendor/golang.org/x/crypto/poly1305
+vendor/golang.org/x/sys/cpu
+vendor/golang.org/x/crypto/chacha20poly1305
+vendor/golang.org/x/crypto/curve25519
+vendor/golang.org/x/crypto/hkdf
+vendor/golang.org/x/text/transform
+vendor/golang.org/x/text/unicode/bidi
+vendor/golang.org/x/text/secure/bidirule
+vendor/golang.org/x/text/unicode/norm
+crypto/x509
+vendor/golang.org/x/net/idna
+crypto/tls
+net/textproto
+vendor/golang.org/x/net/http/httpguts
+vendor/golang.org/x/net/http/httpproxy
+vendor/golang.org/x/net/http2/hpack
+mime
+mime/quotedprintable
+mime/multipart
+net/http/internal
+regexp/syntax
+regexp
+net/http/httptrace
+net/http
+html
+text/template/parse
+text/template
+html/template
+github.com/GeertJohan/go.rice
+github.com/gorilla/mux
+_/var/lib/jenkins/workspace/word-cloud-generator
+./artifacts:
+total 12
+drwxr-xr-x 2 root root 4096 Mar  7 13:57 linux
+drwxr-xr-x 2 root root 4096 Mar  7 13:56 osx
+drwxr-xr-x 2 root root 4096 Mar  7 13:57 windows
+
+./artifacts/linux:
+total 10832
+-rwxr-xr-x 1 root root 11089453 Mar  7 13:57 word-cloud-generator
+
+./artifacts/osx:
+total 10888
+-rwxr-xr-x 1 root root 11148544 Mar  7 13:56 word-cloud-generator
+
+./artifacts/windows:
+total 10572
+-rwxr-xr-x 1 root root 10825728 Mar  7 13:57 word-cloud-generator
++ md5sum artifacts/linux/word-cloud-generator artifacts/osx/word-cloud-generator artifacts/windows/word-cloud-generator
++ gzip artifacts/linux/word-cloud-generator artifacts/osx/word-cloud-generator artifacts/windows/word-cloud-generator
+[8mha:////4DIoLwlI8EgdE9opOLvVps05wvCleCzpGfFP4rFeYTPaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUSDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAG8UfaPvgAAAA==[0m[Pipeline] nexusArtifactUploader
+Uploading artifact word-cloud-generator.gz started....
+GroupId: 1
+ArtifactId: word-cloud-generator
+Classifier: 
+Type: gz
+Version: 1.18
+File: word-cloud-generator.gz
+Repository:word-cloud-generator
+Uploading: http://nexus:8081/repository/word-cloud-generator/1/word-cloud-generator/1.18/word-cloud-generator-1.18.gz
+10 % completed (573 kB / 5.7 MB).
+20 % completed (1.1 MB / 5.7 MB).
+30 % completed (1.7 MB / 5.7 MB).
+40 % completed (2.3 MB / 5.7 MB).
+50 % completed (2.9 MB / 5.7 MB).
+60 % completed (3.4 MB / 5.7 MB).
+70 % completed (4.0 MB / 5.7 MB).
+80 % completed (4.6 MB / 5.7 MB).
+90 % completed (5.2 MB / 5.7 MB).
+100 % completed (5.7 MB / 5.7 MB).
+Uploaded: http://nexus:8081/repository/word-cloud-generator/1/word-cloud-generator/1.18/word-cloud-generator-1.18.gz (5.7 MB at 8.4 MB/s)
+Uploading artifact word-cloud-generator.gz completed.
+[8mha:////4I0hBvX2uiqZkE2Qukwj3EgPS9aPaYNXctDRSiZEbqUoAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISQKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyu//U7g1GGkcWvgAAAA==[0m[Pipeline] }
+[8mha:////4K1kyvAlFpcXXC7RQdRhVVCll2zJmIgRU0uuePDVnGZoAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQYOEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQEwPXV5vgAAAA==[0m[Pipeline] // stage
+[8mha:////4OWE0YFFp5Hs1UFtffNnP3ErchzuPYHGrN7l6LLNNn5WAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohU6oYQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9AMBS+S7CAAAA[0m[Pipeline] stage
+[8mha:////4IaIzNRrUpCuY/D0wEa14mPf5CCti9P2djK8KmTo1LT1AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUwYRQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCi3+2y7zedZvQH4j6CMwgAAAA==[0m[Pipeline] { (alpine)
+[8mha:////4P/EC/Qumzbyaus6C17ZVZR7uiqkD6WWMAZ+34T69YzrAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUxIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+ty4Up8IAAAA=[0m[Pipeline] withCredentials
+Masking supported pattern matches of $NEXUS_CREDS or $NEXUS_CREDS_USR or $NEXUS_CREDS_PSW
+[8mha:////4KlFqDIHyB7xNWFembN/3/sd0V0QsekixNF/2ixPI8BBAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+2YMO4MIAAAA=[0m[Pipeline] {
+[8mha:////4COSlTr0BsrYZZdwbxO9eEPnsqufJzs/6g4s475c6pqxAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIikRJR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMPkEZb3/VO3favo5XL4AAAA=[0m[Pipeline] sh
++ docker build -t ouralpine --build-arg NEXUS_CREDS=**** --build-arg BUILD_NUMBER=18 --network=vagrant_default -f ./alpine/Dockerfile .
+Sending build context to Docker daemon  17.48MB
+Step 1/10 : FROM curlimages/curl AS wcg
+ ---> de5b0ad8265e
+Step 2/10 : ARG NEXUS_CREDS
+ ---> Using cache
+ ---> 035fb61adb95
+Step 3/10 : ARG BUILD_NUMBER
+ ---> Using cache
+ ---> b800f13a4d77
+Step 4/10 : RUN cd /tmp && curl -O -u ${NEXUS_CREDS} -X GET http://nexus:8081/repository/word-cloud-generator/1/word-cloud-generator/1.${BUILD_NUMBER}/word-cloud-generator-1.${BUILD_NUMBER}.gz
+ ---> Running in 156b6c57454c
+[91m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m100 5596k  100 5596k    0     0  47[0m[91m.5M      0 --:--:-- --:--:-- --:--:-- 47.9M
+[0mRemoving intermediate container 156b6c57454c
+ ---> 78ffcb13dde2
+Step 5/10 : RUN cd /tmp && gunzip word-cloud-generator-1.${BUILD_NUMBER}.gz
+ ---> Running in 469bad3245dc
+Removing intermediate container 469bad3245dc
+ ---> 53c5359193cf
+Step 6/10 : FROM alpine:latest
+ ---> e7d92cdc71fe
+Step 7/10 : ARG BUILD_NUMBER
+ ---> Using cache
+ ---> 3b06bdf2a26a
+Step 8/10 : COPY --from=wcg /tmp/word-cloud-generator-1.${BUILD_NUMBER} /word-cloud-generator
+ ---> 3dc835367c11
+Step 9/10 : RUN chmod +x /word-cloud-generator
+ ---> Running in 14cf105d6914
+Removing intermediate container 14cf105d6914
+ ---> 06fcfbd852d1
+Step 10/10 : ENTRYPOINT nohup /word-cloud-generator
+ ---> Running in be31d92c51aa
+Removing intermediate container be31d92c51aa
+ ---> 32968d270940
+Successfully built 32968d270940
+Successfully tagged ouralpine:latest
+[8mha:////4CGUo/wlMxx9fhZEH3pOwagTNnxRPC/ms09wZm4j9FORAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAR2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyt32U/vwBq1seBO+AAAA[0m[Pipeline] sh
++ docker run -d --name finalalpine --network=vagrant_default ouralpine
+870e1ce4340c6f57a8096faddb9d50adf27a686a449db45077b41df357b80a86
+[8mha:////4Nv/eaBjvVGpZcK0/VJ/EHcL3q96tdPCBMYDbuPwAfq/AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO62n9qHN+xdYwq+AAAA[0m[Pipeline] sh
++ jq . | length
++ curl -s -H Content-Type: application/json -d {"text":"ths is a really really really important thing this is"} http://finalalpine:8888/version
++ res=1
++ [ 1 != 1 ]
++ curl -s -H Content-Type: application/json -d {"text":"ths is a really really really important thing this is"} http://finalalpine:8888/api
++ jq . | length
++ res=7
++ [ 7 != 7 ]
+[8mha:////4IOfl4HgjiYEEUmDpgdWfFDBBafJOgdYH7sJ9ybqiNisAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigUSDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK3/dQ+vAEvDk4hvgAAAA==[0m[Pipeline] sh
++ docker rm -f finalalpine
+finalalpine
+[8mha:////4O1R6Qm9KpTYIkbwMhqjC2uhKxBRRGL9G5U2rcWWwwzYAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQUGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK3/dQ+vAFuP1U4vgAAAA==[0m[Pipeline] sh
++ docker rmi ouralpine
+Untagged: ouralpine:latest
+Deleted: sha256:32968d27094016c943d13761eb27de576f7689d3598093308bb65e3039366488
+Deleted: sha256:06fcfbd852d1650d2e5dd61593bff013b7b788e1779bc2f9facae796417d187f
+Deleted: sha256:4bb056e76d0aebcbc54dc61c72d847b7c473e7acf1cd45e35e5f8bcbe366b039
+Deleted: sha256:3dc835367c11ca71afc6fb121897adba322e21302ea5f0a1711ab47805689af9
+Deleted: sha256:8e4d2196d2134ca738d12fc9f632f829fdb7d1e8b4abe65b8cc2c065bc3f40e2
+[8mha:////4AFrx8KGN+uQ/57NZLiqtKLLa3Sa7vTTiE/RjFAMF/xhAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQYOEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgFTNx6xvgAAAA==[0m[Pipeline] }
+[8mha:////4JLoJdiuMoU3gxMUOAO9G36hSbfsE9R07tvn9j1SMVBIAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiRIUQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrd/lPbN0y1S+O+AAAA[0m[Pipeline] // withCredentials
+[8mha:////4BAVbRAnseH5TYdg0GFjiT8z47pLO5UpdK4MQamXSMyfAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOISCTpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BOWhzrWvP5zq5Ha+AAAA[0m[Pipeline] }
+[8mha:////4CuL2u4aQXc9KiezL+vltN+8ZGeRDw27xCtUUXS7HTSZAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEA1CqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw/csH/dvgAAAA==[0m[Pipeline] // stage
+[8mha:////4Ail8tINGFRH0VUBrqgf1EWghh4lqYHTwWNoJgswWOaAAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRIjpERWu54QUmMcaOdWfsC0nFi/gaf8AiEhVbrHa2mdcb1jnBkZIV3uDgMHdOxDDassREabgGmoSni+gIMwUjlJkU9ea0oCI2sKSqYSVhY7ALlB1ahq30+qGboNE2Z07lO0ioXX+HJ1SymFkn/sKcYHcb+0z48/wVwBwjQ71vS7XtB/obOcy+AAAA[0m[Pipeline] }
+$ docker stop --time=1 e6c5c4bfc236d1e2ec24cb08351f63f77a92ef9445654162d2846e55ee8fb739
+$ docker rm -f e6c5c4bfc236d1e2ec24cb08351f63f77a92ef9445654162d2846e55ee8fb739
+[8mha:////4DAjwAhEhu/6Ze3dbSmiggf3vMl+uOTz40b1gy75D2KXAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGIjPh1KRWu54QQmMcaJtRtsB6fiRFyNO2ARiYopRvOmea83LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDPtdu+wHlmWyevgAAAA==[0m[Pipeline] // withDockerContainer
+[8mha:////4H/fShnJC5kPL6cOLtjYjGdcgU7aY25jB5/86xW3C0MRAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJRpHSIitZKwwtMbIwT686xLyQVL+Jr/AGLSFRssdrZZl5v2KYIJ4pW9AYHh6lzIvjJ5iVmisPN0yx6uoqOMJE3ojVzS9qcV2yJDawpSthI2BnsPCWHlmEve/VQlVdoqwvH/B0llE6P8IRCZjOryF9YIhzuk06EP89fASwhMJRNk6uuP576RKi+AAAA[0m[Pipeline] }
+[8mha:////4O7OC1RxVmpCiRKHUSWoFZ/4z+t6Ja1jGMQ23ZNpQVU1AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICElQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Iddu+wGtGR8UvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4G7VQcO1ae6SxShjsaNWwCr1CAzqgL6j4vzvqUbBy6sxAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiI0jI1jZZuh8QQRYgxkdjFZhMoTeTXvICMzVv7qv9e81xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0gL/eCrPwAlk/IDb0AAAA=[0m[Pipeline] }
+[8mha:////4CJ12Z6/gfCGHc1xgAcvbLja4un4Uv5g1arCJ4YUO1gXAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIpQKJAVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Lu9INt+AIXzzK69AAAA[0m[Pipeline] // node
+[8mha:////4AsKlLUCkT7xRmNQ+jrd95iUaHKGvABW98CzevDzA3WvAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKREAUSoqK10vACkxjjxLoL9oWk4kV8jT8QEYmKrXammdcbyxRx5OhUY6n1lCqvutC76amBY3sNPKiGL6piShysKu1Qcm1PM5YsFvOyHAuNlaUqcPLkBGvdmIcpgiFXnCVO7qCR+/qOJzI9lcVE+cIYsbn1dWL6df4GMHadIN/tBdn2A8JUm1u9AAAA[0m[Pipeline] End of Pipeline
+Finished: SUCCESS
