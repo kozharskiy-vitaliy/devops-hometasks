@@ -1,4 +1,5 @@
 FROM debian:buster
+SHELL ["/bin/bash", "-c"]
 RUN apt-get update && apt-get install -y ansible 
 COPY ./playbook.yaml /root/playbook.yaml
 RUN ansible-galaxy install geerlingguy.jenkins \
