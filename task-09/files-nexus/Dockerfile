@@ -1,4 +1,5 @@
 FROM sonatype/nexus3:3.20.1
+SHELL ["/bin/bash", "-c"]
 COPY ./start-nexus.sh /root/start-nexus.sh
 COPY ./curl-nexus.sh /root/curl-nexus.sh 
 USER root

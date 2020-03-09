@@ -1,0 +1,58 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@2.80">
+    <parentIds>
+      <string>30</string>
+    </parentIds>
+    <id>31</id>
+    <descriptorId>org.jenkinsci.plugins.credentialsbinding.impl.BindingStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.80">
+      <arguments>
+        <entry>
+          <string>bindings</string>
+          <list>
+            <map>
+              <entry>
+                <string>$class</string>
+                <string>org.jenkinsci.plugins.credentialsbinding.impl.UsernamePasswordBinding</string>
+              </entry>
+              <entry>
+                <string>variable</string>
+                <string>NEXUS_CREDS</string>
+              </entry>
+              <entry>
+                <string>credentialsId</string>
+                <string>nexus-creds</string>
+              </entry>
+            </map>
+            <map>
+              <entry>
+                <string>$class</string>
+                <string>org.jenkinsci.plugins.credentialsbinding.impl.UsernamePasswordMultiBinding</string>
+              </entry>
+              <entry>
+                <string>usernameVariable</string>
+                <string>NEXUS_CREDS_USR</string>
+              </entry>
+              <entry>
+                <string>passwordVariable</string>
+                <string>NEXUS_CREDS_PSW</string>
+              </entry>
+              <entry>
+                <string>credentialsId</string>
+                <string>nexus-creds</string>
+              </entry>
+            </map>
+          </list>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.40">
+      <startTime>1583783965139</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>

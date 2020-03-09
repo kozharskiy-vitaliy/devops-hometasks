@@ -1,8 +1,8 @@
 FROM debian:buster
+SHELL ["/bin/bash", "-c"]
 RUN apt-get update && apt-get install -y ansible \
 apt-transport-https \
 ca-certificates \
-curl \
 gnupg2 \
 software-properties-common \
 curl
